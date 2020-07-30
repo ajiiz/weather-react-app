@@ -4,7 +4,7 @@ const WeatherBox = () => {
     return (
         <div className="weather-box">
             <div className="temp">
-                15
+                15°C
             </div>
             <div className="weather">
                 Sunny
