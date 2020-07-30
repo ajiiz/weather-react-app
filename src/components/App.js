@@ -5,7 +5,7 @@ import WeatherBox from './WeatherBox'
 
 const api = {
     key: "44e58be5753bc1e714c0d371b5ad00fb",
-    url: "api.openweathermap.org/data/2.5/"
+    url: "https://api.openweathermap.org/data/2.5/"
 }
 
 const App = () => {
@@ -16,15 +16,19 @@ const App = () => {
     const search = event => {
         if(event.key === "Enter") {
             fetch(`${api.url}weather?q=${query}&appid=${api.key}`)
-                .then(res => res.jason())
-                .then(result => setWeather(result));
+            .then(res => res.json())
+            .then(result => {
+                setQuery('')
+                setWeather(result)
+                console.log(result)
+            })
         }
     }
 
     return (
         <div className="app">
             <main>
-                <SearchBox />
+                <SearchBox search={search} value={query} setQuery={setQuery}/>
                 <LocationBox />
                 <WeatherBox />
             </main>

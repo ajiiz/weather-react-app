@@ -5,7 +5,6 @@ const LocationBox = () => {
     const getDate = () => {
 
         let date = String(new window.Date())
-        console.log(date)
         let dayName = date.slice(0,3)
         let month = date.slice(4,7)
         let day = date.slice(8,10)
