@@ -18,9 +18,9 @@ const App = () => {
             fetch(`${api.url}weather?q=${query}&appid=${api.key}`)
             .then(res => res.json())
             .then(result => {
+                console.log(query)
                 setQuery('')
                 setWeather(result)
-                console.log(result)
             })
         }
     }
