@@ -15,6 +15,10 @@ body {
     transition: 0.4s ease-out;
 }
 
+.app-background-change {
+    background-image: url('../assets/background_2.jpg');
+}
+
 main {
     min-height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));

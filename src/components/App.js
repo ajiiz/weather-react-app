@@ -15,10 +15,9 @@ const App = () => {
 
     const search = event => {
         if(event.key === "Enter") {
-            fetch(`${api.url}weather?q=${query}&appid=${api.key}`)
+            fetch(`${api.url}weather?q=${query}&units=metric&appid=${api.key}`)
             .then(res => res.json())
             .then(result => {
-                console.log(query)
                 setQuery('')
                 setWeather(result)
             })
@@ -28,9 +27,14 @@ const App = () => {
     return (
         <div className="app">
             <main>
-                <SearchBox search={search} value={query} setQuery={setQuery}/>
-                <LocationBox />
-                <WeatherBox />
+                <SearchBox search={search} value={query} setQuery={setQuery} />
+                {(typeof weather.main != "undefined") ?
+                    (<div>
+                        <LocationBox city={weather.name} country={weather.sys.country}/>
+                        <WeatherBox temp={weather.main.temp} weatherSky={weather.weather[0].main}/>
+                    </div>)
+                    : ('')
+                }
             </main>
         </div>
     )

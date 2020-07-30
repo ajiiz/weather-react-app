@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LocationBox = () => {
+const LocationBox = (props) => {
 
     const getDate = () => {
 
@@ -12,10 +12,9 @@ const LocationBox = () => {
 
         return `${dayName}, ${month} ${day} ${year}`
     }
-
     return (
         <div className="location-box">
-            <div className="location">Tychy, Poland</div>
+            <div className="location">{props.city}, {props.country}</div>
             <div className="date">{getDate()}</div>
         </div>
     )

@@ -1,13 +1,13 @@
 import React from 'react'
 
-const WeatherBox = () => {
+const WeatherBox = (props) => {
     return (
         <div className="weather-box">
             <div className="temp">
-                15°C
+                {Math.round(props.temp)}°C
             </div>
             <div className="weather">
-                Sunny
+                {props.weatherSky}
             </div>
         </div>
     )
