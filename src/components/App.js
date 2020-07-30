@@ -2,6 +2,7 @@ import React,{ useState }from 'react'
 import SearchBox from './SearchBox'
 import LocationBox from './LocationBox'
 import WeatherBox from './WeatherBox'
+import ErrorDisplay from './ErrorDisplay'
 
 const api = {
     key: "44e58be5753bc1e714c0d371b5ad00fb",
@@ -20,12 +21,16 @@ const App = () => {
             .then(result => {
                 setQuery('')
                 setWeather(result)
+                console.log(result)
             })
         }
     }
 
     return (
-        <div className="app">
+        <div className={(typeof weather.main != "undefined") ?
+            ((weather.main.temp < 20) ?
+                'app background-cold' : 'app')
+            :'app'}>
             <main>
                 <SearchBox search={search} value={query} setQuery={setQuery} />
                 {(typeof weather.main != "undefined") ?
@@ -33,7 +38,9 @@ const App = () => {
                         <LocationBox city={weather.name} country={weather.sys.country}/>
                         <WeatherBox temp={weather.main.temp} weatherSky={weather.weather[0].main}/>
                     </div>)
-                    : ('')
+                    : (
+                        (weather.cod === "404") ? <ErrorDisplay /> : ''
+                    )
                 }
             </main>
         </div>

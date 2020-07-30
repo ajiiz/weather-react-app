@@ -9,14 +9,14 @@ body {
 }
 
 .app {
-    background-image: url('../assets/background_1.png');
+    background-image: url('../assets/background_2.jpg');
     background-position: center;
     background-size: cover;
     transition: 0.4s ease-out;
 }
 
-.app-background-change {
-    background-image: url('../assets/background_2.jpg');
+.app.background-cold {
+    background-image: url('../assets/background_1.png');
 }
 
 main {
