@@ -4,8 +4,9 @@ import LocationBox from './LocationBox'
 import WeatherBox from './WeatherBox'
 import ErrorDisplay from './ErrorDisplay'
 
+
 const api = {
-    key: "44e58be5753bc1e714c0d371b5ad00fb",
+    key: "",
     url: "https://api.openweathermap.org/data/2.5/"
 }
 
