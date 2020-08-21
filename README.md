@@ -1,3 +1,10 @@
+## Weather App
+
+Simple Weather React App.
+Fetching data from OpenWeather API.
+Using simple useState hook.
+Project made for skill testing purposes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
