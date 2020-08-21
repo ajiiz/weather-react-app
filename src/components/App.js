@@ -6,9 +6,10 @@ import ErrorDisplay from './ErrorDisplay'
 
 
 const api = {
-    key: "",
+    key: process.env.REACT_APP_API_KEY,
     url: "https://api.openweathermap.org/data/2.5/"
 }
+console.log(process.env.REACT_APP_API_KEY)
 
 const App = () => {
 
