@@ -10,7 +10,7 @@ Project was made for skill testing purposes and by following youtube course.
 * [Contact](#contact)
 
 ## Status
-#### Published live version at: [weather app](weather-react-app-pw.netlify.app/)
+#### Published live version at: [weather app](https://weather-react-app-pw.netlify.app/)
 
 ## Technologies
 #### Project is created with:
