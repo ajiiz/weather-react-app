@@ -21,7 +21,7 @@ Project was made for skill testing purposes and by following youtube course.
 ## Setup
 * Pull the project from the repository
 ```
-git clone https://https://github.com/ajiiz/plants-react-app
+git clone https://github.com/ajiiz/weather-react-app
 ```
 
 ## License
