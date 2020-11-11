@@ -1,3 +1,4 @@
+## Weather App
 **Weather App** is a website created with **ReactJS** that allows user to search for temperature in inserted city.
 Project was made for skill testing purposes and by following youtube course.
 
